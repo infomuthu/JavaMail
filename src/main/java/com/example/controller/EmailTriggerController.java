@@ -13,7 +13,7 @@ public class EmailTriggerController {
     @Autowired
     MailSender mailSender;
 
-    @RequestMapping(path = "/email/trigger", method = RequestMethod.POST)
+    @RequestMapping(path = "/email/trigger", method = RequestMethod.GET)
     public String triggerEmail() {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setText("Hello from Spring Boot Application");
